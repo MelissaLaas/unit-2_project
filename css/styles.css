@@ -8,12 +8,12 @@
 body {
     font-family: 'Gothic A1', sans-serif;
     color:rgb(70, 69, 69);
-    background:  #f3f3f3;;
+    background:  #f3f3f3;
     font-weight: 100;
     font-size: 25px;
     text-align: center;
     line-height: 1.5;
-    margin: 0;
+    margin: 10px;
 }
 
 
@@ -21,14 +21,13 @@ ul {
     margin: 0;
     padding: 0;
     list-style: none;
-    background-color: #f3f3f3;
 }
 
 p {
     font-size: 16px;
     text-align: center;
     margin-bottom: 1.8em;
-    padding: 10px;
+    padding: 5px;
 }
 
 h3, h2, a {
@@ -43,6 +42,7 @@ h2 {
 }
 a {
     text-decoration: none;
+    font-size: 16px;
 }
 
 img {
@@ -50,43 +50,182 @@ img {
     padding: 10px;
 }
 
+/* --- profile image --- */
 
-/* --- header --- */
- 
-header {
-    padding: 30px
+#pp-image {
+    max-width: 100%;
+    border: 0.5px solid white;
+    transition: ease-in .4s; 
 }
 
-/* --- main --- */
+/* --- header --- */
+
+.name {
+    font-size: 1.35em;
+    color:rgb(155, 107, 84);
+}
+
+.main-nav {
+    margin-top: 5px;;
+}
+
+.name a,
+.main-nav a {
+    text-align: center;
+    display: block;
+    padding: 10px 15px;
+}
+
+.main-nav a {
+    font-size: .95em;
+    color:rgb(70, 69, 69);
+    text-transform: uppercase;
+}
+.main-nav a:hover {
+    color:peru;
+}
+
+.intro-paragraph {
+    font-size: 0.85em;
+}
+
+.banner {
+    align-items: center;
+    padding: 30px;
+    margin: 5px 5px;
+}
+
+/* --- section and main --- */
 
 main {
     background-color: white;
     text-align: center;
 }
 
-.container {
-    padding-left: 1em;
-    padding-right: 1em;
+.header {
+    padding-top: .5em;
+    padding-bottom: .5em;
+    text-align: center;
+    z-index: 100;
+    transition: all 0.5s;
 }
+.title {
+    display: block;
+    padding: 15px;
+}
+
+#contact {
+    background-color: rgba(236, 212, 179, 0.685);
+    padding: 1rem 1rem;
+}
+
+#contact-info {
+    background-color: none;
+    font-size: 16px;
+}
+
+.banner {
+    text-align: center;
+}
+
+.banner {
+    color:peru;
+    background-color: #f3f3f3;
+    padding: 0.8em 0;
+    margin-bottom: 10px;
+}
+
+
 
 /* --- footer --- */
 
 footer {
-    padding: 30px;
-    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 13px;    
+}
+
+#contact-info a:hover {
+    color:sienna;
+    background-color: rgba(255, 253, 253, 0.315);
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+#large-nav {
+    display:flex;
 }
 
 
 
 /* ====================== 
        Media Queries
-======================= */
-
-
-@media screen and (min-width: 768px) {
-    .container {
-        width:70%;
-        max-width: 1000px;
-        margin: 0 auto;
+======================= */ 
+@media (min-width: 321px) and (max-width: 767px) {
+    #large-nav {
+        display: none;
     }
-}    
+}
+
+@media (min-width: 768px) {
+
+    #small-nav {
+        display: none;
+    }
+
+    #top-container {
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+    }    
+
+    .main-nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    #container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .banner {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    }
+
+    main {
+        margin: 20px;
+    }
+
+    .item {
+        flex-grow: 1;
+    }
+
+    #small-nav {
+        display: none;
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    #top-container { 
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+  
+}
