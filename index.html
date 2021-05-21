@@ -27,10 +27,10 @@
     
     <!-- intro header --> 
         <div id= "banner">
-            <div class="pp-image">
+            <div class="banner-item" id="pp-image">
                 <img src="images/new-profile-image.jpg" alt="Illustration of Melissa">
             </div>
-            <div class="intro-paragraph">
+            <div class="banner-item" id="intro-paragraph">
                 <p class="intro">Hi, I'm a front-end developer who loves responsive design and css. 
                 I recently completed my front-end development Techdegree at Treehouse and am excited to put my skills to great use. </p>
             </div>
@@ -86,7 +86,7 @@
 
             <div id="container-skills">
             <div class="skills">
-                <img class="logo" src="images/skills-images/html-sketch.jpeg" >
+                <img class="logo" src="images/skills-images/html-sketch.jpeg" alt="html logo">
                 <h4 class="skills-title">Html</h4>
                 <p class="skills-p">Learning how to use coding languages to create the visual appearance of websites. 
                     I would love to collaborate, in the future, with web designers and back-end web developers.</p>
@@ -100,7 +100,7 @@
             </div>
 
             <div class="skills">
-                <img class="logo" src="images/skills-images//java sketch.jpeg" alt="javascript logo">
+                <img class="logo" src="images/skills-images/java-sketch.jpeg" alt="javascript logo">
                 <h4 class="skills-title">Javascript</h4>
                 <p class="skills-p">Excited to dive into JavaScript, which is a text-based programming language used both on the client-side and 
                     server-side that allows you to make web pages interactive.</p>
@@ -120,21 +120,19 @@
             </div>
 
             <div class="skills">
-                <img class="logo" src="images/skills-images/office sketch.jpeg" alt="office 365 logo">
+                <img class="logo" src="images/skills-images/office-sketch.jpeg" alt="office 365 logo">
                 <h4 class="skills-title">Office 365</h4>
                 <p class="skills-p">MS Excel skills (pivot tables, formula functions, formatting). MS Word Skills (page setup, text formatting, editing). MS Powerpoint (presentation design, animation).</p>
             </div>
+        </div> 
         </section>
    
         <section id="contact">
             <h2 class="title">Contact</h2>
                 <p>If you're interested in chatting or want more information about what I've been working on, I'd love to hear from you!</p>
                 <ul id="contact-info">
-                    <li>
-                        Phone: <a href="+27 888 999 1234" target="blank"> +27 888 999 1234 </a>
-                    </li>
-                    <li> Email: <a href="mailto:email@yoursite.com" target="blank">email@yoursite.com</a>
-                    </li>
+                    <li>Phone: <a href="+27-888-999-1234" target="blank"> +27 888 999 1234 </a></li>
+                    <li> Email: <a href="mailto:email@yoursite.com" target="blank">email@yoursite.com</a></li>
                 </ul>
         </section>
     </main>
@@ -147,7 +145,7 @@
                 <span class="name">Melissa</span>
             </div>
             <div class="separator">
-                <span id="small-nav"><a href="#profile">BACK TO TOP</a></span>
+                <span id="small-nav"><a href="#">BACK TO TOP</a></span>
                 <ul id="large-nav">
                     <li><a href="#">Home</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>

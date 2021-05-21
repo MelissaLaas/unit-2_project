@@ -39,6 +39,7 @@ h3, h2, a {
 
 h2 {
     font-weight: bold;
+    padding-top: 20px;
 }
 
 h4 {
@@ -63,7 +64,7 @@ img {
 }
 
 .main-nav {
-    margin-top: 5px;;
+    margin-top: 5px;
 }
 
 .name a,
@@ -79,7 +80,7 @@ img {
     text-transform: uppercase;
 }
 .main-nav a:hover {
-    color:peru;
+    color: white;
 }
 .intro {
     font-size: 18px;
@@ -87,15 +88,14 @@ img {
 /*--- intro header ---*/ 
 
 #banner {
-    /* background-color: rgb(246, 189, 96, 1); */
     text-align: center;
     padding: 10px;
     margin: 0 auto;
     max-width: 1100px;
 }
 
-.pp-image,
-.intro-paragraph {
+#pp-image,
+#intro-paragraph {
     margin: 10px;
     min-height: 250px;
     text-align: center;
@@ -141,24 +141,30 @@ main {
 #container-skills {
     flex: 1 300px;
     padding: 1rem;
-    text-align: justify;
-    background-color: rgb(247,237,226,1);
+    text-align: center;
 }
+
 .skills-title,
 .skills-p {
     color: rgb(79, 113, 104);
     float: left;
+    padding-left: 7px;
     text-align: left;
+    padding:5px
 }
 
-.skills {
+.skills,
+#skills {
     align-items: center;
+    background-color: rgb(247,237,226,1);
 }
 
 .logo {
     width: 60px;
     height: 60px;
     float: left;
+    box-shadow: 0 2px 5px rgb(246 189 96);
+    transition: all 200ms ease-out;
 }
 
 /* --- footer --- */
@@ -172,7 +178,8 @@ main {
     display:flex;
 }
 
-#large-nav a:hover {
+#large-nav a:hover,
+ #small-nav a:hover {
     color: peru;
 }
 
@@ -191,7 +198,6 @@ footer {
 }
 
 #contact-info {
-    background-color: none;
     font-size: 16px;
 }
 
@@ -206,6 +212,13 @@ footer {
 ================================================ */ 
 
 @media (min-width: 321px) and (max-width: 767px) {
+    
+    .nav-links:hover {
+        background-color: rgb(245, 202, 195);
+        border-radius: 5px;
+        transition: all .5s;
+    }
+
     #large-nav {
         display: none;
     }
@@ -268,8 +281,8 @@ footer {
         flex-direction: row-reverse;
     }
 
-    .pp-image,
-    .intro-paragraph {
+    #pp-image,
+    #intro-paragraph {
         flex-basis: calc(50% - 20px);
     }
 
