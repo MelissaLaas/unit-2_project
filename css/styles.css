@@ -40,6 +40,11 @@ h3, h2, a {
 h2 {
     font-weight: bold;
 }
+
+h4 {
+    font-size: 14px;
+}
+
 a {
     text-decoration: none;
     font-size: 16px;
@@ -117,13 +122,15 @@ main {
     display: block;
     padding: 15px;
 }
-#container {
+#container,
+#container-skills {
     margin: 0 auto;
     max-width: 1100px;
     padding: 10px;
 }
 
-.item {
+.item,
+.skills {
     margin:10px;
     min-height: 250px;
     text-align: center;
@@ -131,8 +138,27 @@ main {
     padding-top: 5px;
 }
 
-.item:hover {
-    border-color: #ffde6f;
+#container-skills {
+    flex: 1 300px;
+    padding: 1rem;
+    text-align: justify;
+    background-color: rgb(247,237,226,1);
+}
+.skills-title,
+.skills-p {
+    color: rgb(79, 113, 104);
+    float: left;
+    text-align: left;
+}
+
+.skills {
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    float: left;
 }
 
 /* --- footer --- */
@@ -144,6 +170,10 @@ main {
 
 #large-nav {
     display:flex;
+}
+
+#large-nav a:hover {
+    color: peru;
 }
 
 footer {
@@ -184,21 +214,21 @@ footer {
     #map:hover {
         border-radius: 4px;
         transition: all .5s;
-        background-color: rgb(246, 189, 96);
+        background-color: rgba(246, 189, 96,  0.201);
     }
 
     #search:hover,
     #gallery:hover {
         border-radius: 4px;
         transition: all .5s;
-        background-color: rgb(242, 132, 130);
+        background-color: rgb(242, 132, 130,  0.201);
     }
 
     #travel:hover,
     #calculator:hover {
         border-radius: 4px;
         transition: all .5s;
-        background-color: rgb(132, 165, 157);
+        background-color: rgb(132, 165, 157,  0.201);
     }
 }
 
@@ -222,12 +252,14 @@ footer {
         justify-content: center;
     }
     
-    #container {
+    #container,
+    #container-skills {
         display: flex;
         flex-wrap: wrap;
     }
 
-    .item {
+    .item,
+    .skills {
         flex-basis: calc(50% - 20px);
     }
    
@@ -249,21 +281,21 @@ footer {
     #map:hover {
         border-radius: 4px;
         transition: all .5s;
-        background-color: rgb(246, 189, 96);
+        background-color: rgb(246, 189, 96,  0.201);
     }
 
     #gallery:hover,
     #search:hover {
         border-radius: 4px;
         transition: all .5s;
-        background-color: rgb(242, 132, 130);
+        background-color: rgb(242, 132, 130,  0.201);
     }
 
     #travel:hover,
     #calculator:hover {
         border-radius: 4px;
         transition: all .5s;
-        background-color: rgb(132, 165, 157);
+        background-color: rgb(132, 165, 157,  0.201);
     }
 }
 
@@ -276,7 +308,8 @@ footer {
         justify-content: space-between;
     }
   
-    .item {
+    .item,
+    .skills {
         flex-basis: calc(33% - 20px);
     }
 
@@ -284,21 +317,21 @@ footer {
     #calculator:hover {
         border-radius: 4px;
         transition: all .5s;
-        background-color: rgb(246, 189, 96);
+        background-color: rgba(246, 189, 96, 0.201);
     }
 
     #map:hover,
     #search:hover {
         border-radius: 4px;
         transition: all .5s;
-        background-color: rgb(242, 132, 130);
+        background-color: rgb(242, 132, 130, 0.201);
     }
 
     #travel:hover,
     #gallery:hover {
         border-radius: 4px;
         transition: all .5s;
-        background-color: rgb(132, 165, 157);
+        background-color: rgb(132, 165, 157, 0.201);
     }
 
 }
