@@ -8,7 +8,7 @@
 body {
     font-family: 'Gothic A1', sans-serif;
     color:rgb(70, 69, 69);
-    background:  #f3f3f3;
+    background: rgb(247,237,226,1);
     font-weight: 100;
     font-size: 25px;
     text-align: center;
@@ -50,15 +50,7 @@ img {
     padding: 10px;
 }
 
-/* --- profile image --- */
-
-#pp-image {
-    max-width: 100%;
-    border: 0.5px solid white;
-    transition: ease-in .4s; 
-}
-
-/* --- header --- */
+/* --- header/top-navigation --- */
 
 .name {
     font-size: 1.35em;
@@ -84,18 +76,30 @@ img {
 .main-nav a:hover {
     color:peru;
 }
+.intro {
+    font-size: 18px;
+}
+/*--- intro header ---*/ 
 
+#banner {
+    /* background-color: rgb(246, 189, 96, 1); */
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+.pp-image,
 .intro-paragraph {
-    font-size: 0.85em;
+    margin: 10px;
+    min-height: 250px;
+    text-align: center;
+    letter-spacing: 1px;
+    padding-top: 5px;
 }
 
-.banner {
-    align-items: center;
-    padding: 30px;
-    margin: 5px 5px;
-}
 
-/* --- section and main --- */
+/* --- main --- */
 
 main {
     background-color: white;
@@ -113,31 +117,34 @@ main {
     display: block;
     padding: 15px;
 }
-
-#contact {
-    background-color: rgba(236, 212, 179, 0.685);
-    padding: 1rem 1rem;
+#container {
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 10px;
 }
 
-#contact-info {
-    background-color: none;
-    font-size: 16px;
-}
-
-.banner {
+.item {
+    margin:10px;
+    min-height: 250px;
     text-align: center;
+    letter-spacing: 1px;
+    padding-top: 5px;
 }
 
-.banner {
-    color:peru;
-    background-color: #f3f3f3;
-    padding: 0.8em 0;
-    margin-bottom: 10px;
+.item:hover {
+    border-color: #ffde6f;
 }
-
-
 
 /* --- footer --- */
+
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+#large-nav {
+    display:flex;
+}
 
 footer {
     font-size: 12px;
@@ -148,28 +155,50 @@ footer {
     margin-bottom: 13px;    
 }
 
+#contact {
+    background-color: rgba(245, 202, 195, 1);
+    padding: 1rem 1rem;
+}
+
+#contact-info {
+    background-color: none;
+    font-size: 16px;
+}
+
 #contact-info a:hover {
     color:sienna;
     background-color: rgba(255, 253, 253, 0.315);
 }
 
-.footer {
-    display: flex;
-    justify-content: space-between;
-}
 
-#large-nav {
-    display:flex;
-}
+/* ================================================ 
+                Media Queries
+================================================ */ 
 
-
-
-/* ====================== 
-       Media Queries
-======================= */ 
 @media (min-width: 321px) and (max-width: 767px) {
     #large-nav {
         display: none;
+    }
+
+    #market:hover,
+    #map:hover {
+        border-radius: 4px;
+        transition: all .5s;
+        background-color: rgb(246, 189, 96);
+    }
+
+    #search:hover,
+    #gallery:hover {
+        border-radius: 4px;
+        transition: all .5s;
+        background-color: rgb(242, 132, 130);
+    }
+
+    #travel:hover,
+    #calculator:hover {
+        border-radius: 4px;
+        transition: all .5s;
+        background-color: rgb(132, 165, 157);
     }
 }
 
@@ -195,28 +224,47 @@ footer {
     
     #container {
         display: flex;
-        flex-direction: row;
-        width: 100%;
-    }
-
-    .banner {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-around;
-    }
-
-    main {
-        margin: 20px;
+        flex-wrap: wrap;
     }
 
     .item {
-        flex-grow: 1;
+        flex-basis: calc(50% - 20px);
+    }
+   
+    #banner {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .pp-image,
+    .intro-paragraph {
+        flex-basis: calc(50% - 20px);
     }
 
     #small-nav {
         display: none;
     }
 
+    #market:hover,
+    #map:hover {
+        border-radius: 4px;
+        transition: all .5s;
+        background-color: rgb(246, 189, 96);
+    }
+
+    #gallery:hover,
+    #search:hover {
+        border-radius: 4px;
+        transition: all .5s;
+        background-color: rgb(242, 132, 130);
+    }
+
+    #travel:hover,
+    #calculator:hover {
+        border-radius: 4px;
+        transition: all .5s;
+        background-color: rgb(132, 165, 157);
+    }
 }
 
 @media (min-width: 1024px) {
@@ -228,4 +276,29 @@ footer {
         justify-content: space-between;
     }
   
+    .item {
+        flex-basis: calc(33% - 20px);
+    }
+
+    #market:hover,
+    #calculator:hover {
+        border-radius: 4px;
+        transition: all .5s;
+        background-color: rgb(246, 189, 96);
+    }
+
+    #map:hover,
+    #search:hover {
+        border-radius: 4px;
+        transition: all .5s;
+        background-color: rgb(242, 132, 130);
+    }
+
+    #travel:hover,
+    #gallery:hover {
+        border-radius: 4px;
+        transition: all .5s;
+        background-color: rgb(132, 165, 157);
+    }
+
 }
